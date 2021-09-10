@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Chat room</title>
+</head>
+<body>
+
+    <!-- CONTAINER AND TITLE -->
+
+<div class="container my-4">
+    <h1 class="my-4 text-center">Chat room</h1>
+
+
+    <!-- BUTTONS FOR CHATROOM -->
+    <div class="chat-rooms mb-3 text-center">
+        <div class="my-2">Choose a chatroom:</div>
+        <button class="btn" id="general">#general</button>
+        <button class="btn" id="gaming">#gaming</button>
+        <button class="btn" id="music">#music</button>
+        <button class="btn" id="ninjas">#ninjas</button>
+    </div>
+
+    <!-- CHAT LIST / WINDOW-->
+    <div class="chat-window">
+        <ul class="chat-list list-group"></ul>
+    </div>
+
+    <!-- NEW CHAT FORM -->
+    <form action="" class="new-chat my-3">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text">Your message:</div>
+            </div>
+                <input type="text" id="message" class="form-control" required>
+            <div class="input-group-append">
+                <input type="submit" class="btn" value="send">
+            </div>
+        </div>
+    </form>
+
+    <!-- UPDATE NAME FORM -->
+    <form action="" class="new-name my-3">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text">Update name:</div>
+            </div>
+                <input type="text" id="name" class="form-control" required>
+            <div class="input-group-append">
+                <input type="submit" class="btn" value="update">
+            </div>
+        </div>
+        <div class="update-message"></div>
+    </form>
+
+</div>
+
+
+
+
+
+
+
+
+
+    <script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+  apiKey: "AIzaSyDtKySlYDuw-1c5g1ngV7jTuD_J9CVNyto",
+  authDomain: "section-16-84f19.firebaseapp.com",
+  projectId: "section-16-84f19",
+  storageBucket: "section-16-84f19.appspot.com",
+  messagingSenderId: "1034058746",
+  appId: "1:1034058746:web:9fc72ff7a24f8589fe8243"
+};
+    firebase.initializeApp(config);
+    const db = firebase.firestore();  
+  </script>
+
+
+    <script src="scripts/chat.js"></script>
+    <script src="scripts/ui.js"></script>
+    <script src="scripts/app.js"></script>
+
+</body>
+</html>
